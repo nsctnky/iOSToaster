@@ -10,16 +10,12 @@ import SwiftUI
 
 class ToastController {
     public static func ShowToast(message: String) {
-        DispatchQueue.main.async {
-            if let rootViewController = UIApplication.shared.windows.first?.rootViewController {
-                let toast = Toast().CreateToast(message: message)
-                rootViewController.present(toast, animated: true)
-                
-                let duration: Double = 1
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration){
-                    toast.dismiss(animated: true)
-                }
-            }
+    
+        if let rootViewController = UIApplication.shared.windows.first?.rootViewController {
+            let toast = Toast(message: message, isShortDuration: true)
+            let mainDispatchQueue = DispatchQueue.main
+            
+            toast.Show(context: mainDispatchQueue, rootView: rootViewController)
         }
     }
 }
