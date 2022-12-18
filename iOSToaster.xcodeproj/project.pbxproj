@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500D6CF3294F924300F5F101 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500D6CF2294F924300F5F101 /* Toast.swift */; };
+		500D6CF5294F92E700F5F101 /* ToastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500D6CF4294F92E700F5F101 /* ToastController.swift */; };
+		500D6CF7294F94F900F5F101 /* ToasterBridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500D6CF6294F94F900F5F101 /* ToasterBridging.swift */; };
 		50CAA9CC294E441300DA4529 /* iOSToaster.docc in Sources */ = {isa = PBXBuildFile; fileRef = 50CAA9CB294E441300DA4529 /* iOSToaster.docc */; };
 		50CAA9D2294E441300DA4529 /* iOSToaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CAA9C7294E441300DA4529 /* iOSToaster.framework */; };
 		50CAA9D7294E441300DA4529 /* iOSToasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CAA9D6294E441300DA4529 /* iOSToasterTests.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		500D6CF2294F924300F5F101 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		500D6CF4294F92E700F5F101 /* ToastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastController.swift; sourceTree = "<group>"; };
+		500D6CF6294F94F900F5F101 /* ToasterBridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToasterBridging.swift; sourceTree = "<group>"; };
 		50CAA9C7294E441300DA4529 /* iOSToaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOSToaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CAA9CA294E441300DA4529 /* iOSToaster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSToaster.h; sourceTree = "<group>"; };
 		50CAA9CB294E441300DA4529 /* iOSToaster.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iOSToaster.docc; sourceTree = "<group>"; };
@@ -71,8 +77,11 @@
 		50CAA9C9294E441300DA4529 /* iOSToaster */ = {
 			isa = PBXGroup;
 			children = (
+				500D6CF6294F94F900F5F101 /* ToasterBridging.swift */,
 				50CAA9CA294E441300DA4529 /* iOSToaster.h */,
 				50CAA9CB294E441300DA4529 /* iOSToaster.docc */,
+				500D6CF2294F924300F5F101 /* Toast.swift */,
+				500D6CF4294F92E700F5F101 /* ToastController.swift */,
 			);
 			path = iOSToaster;
 			sourceTree = "<group>";
@@ -194,7 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500D6CF7294F94F900F5F101 /* ToasterBridging.swift in Sources */,
+				500D6CF5294F92E700F5F101 /* ToastController.swift in Sources */,
 				50CAA9CC294E441300DA4529 /* iOSToaster.docc in Sources */,
+				500D6CF3294F924300F5F101 /* Toast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +362,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,6 +391,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,6 +410,7 @@
 		50CAA9DF294E441300DA4529 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MZKGB48FLT;
@@ -412,6 +427,7 @@
 		50CAA9E0294E441300DA4529 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MZKGB48FLT;
