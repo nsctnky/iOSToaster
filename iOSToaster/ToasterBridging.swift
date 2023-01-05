@@ -8,7 +8,7 @@
 import Foundation
 
 @_cdecl("iOSToaster_ShowToast")
-public func ShowToast(message: UnsafePointer<CChar>) {
+public func ShowToast(message: UnsafePointer<CChar>, isShortDuration: Bool) {
     let msg = String(cString: message)
-    ToastController.ShowToast(message: msg)
+    ToastController.ShowToast(message: msg, isShortDuration: isShortDuration)
 }

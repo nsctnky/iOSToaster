@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 
 class ToastController {
-    public static func ShowToast(message: String) {
+    public static func ShowToast(message: String, isShortDuration: Bool) {
     
         if let rootViewController = UIApplication.shared.windows.first?.rootViewController {
-            let toast = Toast(message: message, isShortDuration: true)
+            let toast = Toast(message: message, isShortDuration: isShortDuration)
             let mainDispatchQueue = DispatchQueue.main
             
             toast.Show(context: mainDispatchQueue, rootView: rootViewController)
